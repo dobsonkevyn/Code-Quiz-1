@@ -12,6 +12,6 @@ Website URL: https://github.com/dobsonkevyn/Code-Quiz-1
 
 Screenshot
 The following image shows the web application's initial appearance:
-![Screenshot](/Code-Quiz-1/)
+![Screenshot](/Code-Quiz-1/assets/images/Screenshot.png) 
 
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

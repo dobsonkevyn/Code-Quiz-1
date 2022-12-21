@@ -1,95 +1,114 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+:root{
+  --btnBackground: #5865f2;
+  --btnBackgroundHover: #4752c4;
+  --mainBackground: #36393f;
+  --mainTextColor: #ffffff;
+  --secondaryBackground: #4f545c;
 }
-
 body {
-  font-family: sans-serif;
+  position: relative;
+  margin: 0.5rem;
+  min-height: 98vh;
+  background: var(--mainBackground);
+  color: var(--mainTextColor);
 }
-
-h1 {
+header {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+#display-highscore-div > button,
+#highscore-input-div > button,
+header button {
+  text-decoration: none;
+  background: var(--btnBackground);
+  color: var(--mainTextColor);
+  border: 0;
+  border-radius: 7px; /* round corners */
+  padding: 3px 10px 3px 10px;
+}
+header p {
+  padding: 3px 10px 3px 10px; /* add same padding as highscores so looks cleaner */
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 5vh 15vw 5vh 15vw;
+}
+main h1 {
+  margin: 3vh;
+  font-size: 200%;
   text-align: center;
-  padding-top: 0px;
-  font-size: 21px;
 }
 
-h2 {
-  font-size: 23px;
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 40px;
+main > div,
+#instructions {
+  padding: 0 15% 0 15%;
   text-align: center;
+  font-size: 125%;
 }
-
-P {
-  text-align: center;
+main > button {
+  margin: 3vh;
+  width: max-content;
+  padding: 0 10px 0 10px;
+  background: var(--btnBackground);
+  color: var(--mainTextColor);
+  border: 0;
+  border-radius: 7px; /* round corners */
+  font-size: 150%;
 }
-
-.quiz {
-  text-align: center;
-  font-size: 23px;
-  padding: 55px;
-  background-color: #1ac40a;
+main > ul {
+  align-self: flex-start;
+  margin-left: 15%;
 }
-
-#answers {
-  text-align: center;
-  color: rgb(245, 246, 247);
+main > ul li {
+  margin: 3vh;
+  width: max-content;
+  min-width: 10vw;
+  padding: 5px 10px 5px 10px;
+  background: var(--btnBackground);
+  color: var(--mainTextColor);
+  border: 0;
+  border-radius: 7px; /* round corners */
+  font-size: 150%;
 }
-
-#submit {
-  border-radius: 6px;
-  text-align: center;
-  background-color: rgb(155, 8, 175);
-  color: hsl(0, 0%, 100%);
+main > div {
+  justify-content: flex-start;
+  display: none;
 }
-
-ul li:hover {
-  background-color: rgb(231, 220, 245);
+main > div > * {
+  margin: 1rem;
 }
-
-li.active {
-  background-color: blueviolet;
-}
-
-form {
-  display: block;
-  margin: 30px auto;
-  text-align: left;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 23vw;
-  background-color: #c89ed6;
-  border-radius: 11px;
-  padding: 20px;
-  line-height: 2;
-}
-
-.btn {
-  border: none;
-  background-color: rgb(8, 175, 19);
-  border-radius: 11px;
-  color: hsl(0, 0%, 100%);
-  display: inline-block;
-  font-size: 22px;
-  line-height: 22px;
-  margin: 25px 11px 16px 20px;
-  padding: 14px 34px;
-  text-align: center;
+#submit-highscore-div button:hover,
+#display-highscore-div button:hover,
+body button:hover, /* all buttons have same hover effect so reuse code :) */
+main > ul li:hover {
+  background: var(--btnBackgroundHover);
   cursor: pointer;
-  margin-left: 43%;
+}
+footer {
+  position: absolute;
+  height: 5vh;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+#highscore-input-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#highscore-input-div > *{
+  margin: 0.5rem;
+}
+#highscore-input-div > p {
+  display: inline;
 }
 
-@media (max-width: 690px) {
-  .btn {
-    font-size: 1rem;
-    margin: 16px 0px 0px 0px;
-    padding: 10px 15px;
-  }
-}
-
-@media (max-width: 500px) {
-  .btn {
-    font-size: 0.8rem;
-  }
+#highscore-input-div > input {
+  width:30%;
 }
