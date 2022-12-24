@@ -7,7 +7,7 @@ JavaScript is a powerful language that makes everything possible. The beauty of 
 
 
 
-Website URL: https://github.com/dobsonkevyn/Code-Quiz-1
+Website URL: https://dobsonkevyn.github.io/Code-Quiz-1/
 
 
 Screenshot
